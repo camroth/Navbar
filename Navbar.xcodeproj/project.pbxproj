@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C24EAF01EDE412BA9014DE5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D95E68088548049721A0F0 /* libPods.a */; };
+		D7B1216716E4038600D33170 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215816E4038600D33170 /* LICENSE.txt */; };
+		D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */; };
+		D7B1216916E4038600D33170 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */; };
+		D7B1216A16E4038600D33170 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215B16E4038600D33170 /* OFL.txt */; };
+		D7B1216B16E4038600D33170 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215C16E4038600D33170 /* OpenSans-Bold.ttf */; };
+		D7B1216C16E4038600D33170 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215D16E4038600D33170 /* OpenSans-BoldItalic.ttf */; };
+		D7B1216D16E4038600D33170 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215E16E4038600D33170 /* OpenSans-ExtraBold.ttf */; };
+		D7B1216E16E4038600D33170 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215F16E4038600D33170 /* OpenSans-ExtraBoldItalic.ttf */; };
+		D7B1216F16E4038600D33170 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216016E4038600D33170 /* OpenSans-Italic.ttf */; };
+		D7B1217016E4038600D33170 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216116E4038600D33170 /* OpenSans-Light.ttf */; };
+		D7B1217116E4038600D33170 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216216E4038600D33170 /* OpenSans-LightItalic.ttf */; };
+		D7B1217216E4038600D33170 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216316E4038600D33170 /* OpenSans-Regular.ttf */; };
+		D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */; };
+		D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */; };
 		D7C2482316E1A6AF003962D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482216E1A6AF003962D5 /* UIKit.framework */; };
 		D7C2482516E1A6AF003962D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482416E1A6AF003962D5 /* Foundation.framework */; };
 		D7C2482716E1A6AF003962D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482616E1A6AF003962D5 /* CoreGraphics.framework */; };
@@ -16,8 +31,7 @@
 		D7C2483516E1A6AF003962D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C2483416E1A6AF003962D5 /* Default.png */; };
 		D7C2483716E1A6AF003962D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C2483616E1A6AF003962D5 /* Default@2x.png */; };
 		D7C2483916E1A6AF003962D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C2483816E1A6AF003962D5 /* Default-568h@2x.png */; };
-		D7C2483C16E1A6AF003962D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C2483A16E1A6AF003962D5 /* MainStoryboard.storyboard */; };
-		D7C2483F16E1A6AF003962D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C2483E16E1A6AF003962D5 /* ViewController.m */; };
+		D7C2483F16E1A6AF003962D5 /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C2483E16E1A6AF003962D5 /* PostsViewController.m */; };
 		D7C2485416E1A8B5003962D5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2484716E1A8B4003962D5 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D7C2485516E1A8B5003962D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2484816E1A8B4003962D5 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D7C2485616E1A8B5003962D5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2484916E1A8B4003962D5 /* AudioToolbox.framework */; };
@@ -33,9 +47,26 @@
 		D7C2486016E1A8B5003962D5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2485316E1A8B5003962D5 /* SystemConfiguration.framework */; };
 		D7C2486416E1AAAB003962D5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2486316E1AAAB003962D5 /* Parse.framework */; };
 		D7C2486A16E2BAFD003962D5 /* NSDate+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C2486916E2BAFD003962D5 /* NSDate+Calculations.m */; };
+		D7C2489F16E2C78E003962D5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C2489E16E2C78E003962D5 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73D95E68088548049721A0F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73EF161242AE4A75A600E8A6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D7B1215816E4038600D33170 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		D7B1215B16E4038600D33170 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		D7B1215C16E4038600D33170 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D7B1215D16E4038600D33170 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D7B1215E16E4038600D33170 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D7B1215F16E4038600D33170 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D7B1216016E4038600D33170 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		D7B1216116E4038600D33170 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D7B1216216E4038600D33170 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		D7B1216316E4038600D33170 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		D7C2481F16E1A6AF003962D5 /* Navbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C2482216E1A6AF003962D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7C2482416E1A6AF003962D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,9 +80,8 @@
 		D7C2483416E1A6AF003962D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D7C2483616E1A6AF003962D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D7C2483816E1A6AF003962D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D7C2483B16E1A6AF003962D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		D7C2483D16E1A6AF003962D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7C2483E16E1A6AF003962D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7C2483D16E1A6AF003962D5 /* PostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostsViewController.h; sourceTree = "<group>"; };
+		D7C2483E16E1A6AF003962D5 /* PostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostsViewController.m; sourceTree = "<group>"; };
 		D7C2484716E1A8B4003962D5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		D7C2484816E1A8B4003962D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D7C2484916E1A8B4003962D5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -68,6 +98,7 @@
 		D7C2486316E1AAAB003962D5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D7C2486816E2BAFD003962D5 /* NSDate+Calculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calculations.h"; sourceTree = "<group>"; };
 		D7C2486916E2BAFD003962D5 /* NSDate+Calculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calculations.m"; sourceTree = "<group>"; };
+		D7C2489E16E2C78E003962D5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,18 +123,57 @@
 				D7C2482316E1A6AF003962D5 /* UIKit.framework in Frameworks */,
 				D7C2482516E1A6AF003962D5 /* Foundation.framework in Frameworks */,
 				D7C2486416E1AAAB003962D5 /* Parse.framework in Frameworks */,
+				1C24EAF01EDE412BA9014DE5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7B1215616E4038600D33170 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7B1215716E4038600D33170 /* Fonts */,
+				D7B1216616E4038600D33170 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7B1215716E4038600D33170 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7B1215816E4038600D33170 /* LICENSE.txt */,
+				D7B1215B16E4038600D33170 /* OFL.txt */,
+				D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */,
+				D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */,
+				D7B1215C16E4038600D33170 /* OpenSans-Bold.ttf */,
+				D7B1215D16E4038600D33170 /* OpenSans-BoldItalic.ttf */,
+				D7B1215E16E4038600D33170 /* OpenSans-ExtraBold.ttf */,
+				D7B1215F16E4038600D33170 /* OpenSans-ExtraBoldItalic.ttf */,
+				D7B1216016E4038600D33170 /* OpenSans-Italic.ttf */,
+				D7B1216116E4038600D33170 /* OpenSans-Light.ttf */,
+				D7B1216216E4038600D33170 /* OpenSans-LightItalic.ttf */,
+				D7B1216316E4038600D33170 /* OpenSans-Regular.ttf */,
+				D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */,
+				D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D7B1216616E4038600D33170 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		D7C2481616E1A6AF003962D5 = {
 			isa = PBXGroup;
 			children = (
 				D7C2482816E1A6AF003962D5 /* Navbar */,
 				D7C2482116E1A6AF003962D5 /* Frameworks */,
 				D7C2482016E1A6AF003962D5 /* Products */,
+				73EF161242AE4A75A600E8A6 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +205,7 @@
 				D7C2482216E1A6AF003962D5 /* UIKit.framework */,
 				D7C2482416E1A6AF003962D5 /* Foundation.framework */,
 				D7C2482616E1A6AF003962D5 /* CoreGraphics.framework */,
+				73D95E68088548049721A0F0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,12 +213,12 @@
 		D7C2482816E1A6AF003962D5 /* Navbar */ = {
 			isa = PBXGroup;
 			children = (
+				D7B1215616E4038600D33170 /* Resources */,
 				D7C2486E16E2BD7D003962D5 /* Views */,
 				D7C2486B16E2BD4F003962D5 /* Controllers */,
 				D7C2486D16E2BD61003962D5 /* Categories */,
 				D7C2483116E1A6AF003962D5 /* AppDelegate.h */,
 				D7C2483216E1A6AF003962D5 /* AppDelegate.m */,
-				D7C2483A16E1A6AF003962D5 /* MainStoryboard.storyboard */,
 				D7C2482916E1A6AF003962D5 /* Supporting Files */,
 			);
 			path = Navbar;
@@ -170,8 +241,8 @@
 		D7C2486B16E2BD4F003962D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D7C2483D16E1A6AF003962D5 /* ViewController.h */,
-				D7C2483E16E1A6AF003962D5 /* ViewController.m */,
+				D7C2483D16E1A6AF003962D5 /* PostsViewController.h */,
+				D7C2483E16E1A6AF003962D5 /* PostsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +259,7 @@
 		D7C2486E16E2BD7D003962D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7C2489E16E2C78E003962D5 /* MainWindow.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -202,6 +274,7 @@
 				D7C2481B16E1A6AF003962D5 /* Sources */,
 				D7C2481C16E1A6AF003962D5 /* Frameworks */,
 				D7C2481D16E1A6AF003962D5 /* Resources */,
+				7D77FC0533244A568E00E66D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,11 +320,42 @@
 				D7C2483516E1A6AF003962D5 /* Default.png in Resources */,
 				D7C2483716E1A6AF003962D5 /* Default@2x.png in Resources */,
 				D7C2483916E1A6AF003962D5 /* Default-568h@2x.png in Resources */,
-				D7C2483C16E1A6AF003962D5 /* MainStoryboard.storyboard in Resources */,
+				D7C2489F16E2C78E003962D5 /* MainWindow.xib in Resources */,
+				D7B1216716E4038600D33170 /* LICENSE.txt in Resources */,
+				D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */,
+				D7B1216916E4038600D33170 /* Montserrat-Regular.ttf in Resources */,
+				D7B1216A16E4038600D33170 /* OFL.txt in Resources */,
+				D7B1216B16E4038600D33170 /* OpenSans-Bold.ttf in Resources */,
+				D7B1216C16E4038600D33170 /* OpenSans-BoldItalic.ttf in Resources */,
+				D7B1216D16E4038600D33170 /* OpenSans-ExtraBold.ttf in Resources */,
+				D7B1216E16E4038600D33170 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				D7B1216F16E4038600D33170 /* OpenSans-Italic.ttf in Resources */,
+				D7B1217016E4038600D33170 /* OpenSans-Light.ttf in Resources */,
+				D7B1217116E4038600D33170 /* OpenSans-LightItalic.ttf in Resources */,
+				D7B1217216E4038600D33170 /* OpenSans-Regular.ttf in Resources */,
+				D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */,
+				D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D77FC0533244A568E00E66D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7C2481B16E1A6AF003962D5 /* Sources */ = {
@@ -260,7 +364,7 @@
 			files = (
 				D7C2482F16E1A6AF003962D5 /* main.m in Sources */,
 				D7C2483316E1A6AF003962D5 /* AppDelegate.m in Sources */,
-				D7C2483F16E1A6AF003962D5 /* ViewController.m in Sources */,
+				D7C2483F16E1A6AF003962D5 /* PostsViewController.m in Sources */,
 				D7C2486A16E2BAFD003962D5 /* NSDate+Calculations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,14 +378,6 @@
 				D7C2482C16E1A6AF003962D5 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D7C2483A16E1A6AF003962D5 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7C2483B16E1A6AF003962D5 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -345,6 +441,7 @@
 		};
 		D7C2484316E1A6AF003962D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EF161242AE4A75A600E8A6 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,6 +459,7 @@
 		};
 		D7C2484416E1A6AF003962D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73EF161242AE4A75A600E8A6 /* Pods.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

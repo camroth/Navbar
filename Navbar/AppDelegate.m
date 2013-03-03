@@ -8,40 +8,119 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "PostsViewController.h"
+#import "NSDate+Calculations.h"
+#import "Reachability.h"
+
+@interface AppDelegate() {
+    
+}
+
+@property (nonatomic, strong) PostsViewController *postsViewController;
+
+@property (nonatomic, strong) Reachability *hostReach;
+@property (nonatomic, strong) Reachability *internetReach;
+@property (nonatomic, strong) Reachability *wifiReach;
+
+@end
 
 @implementation AppDelegate
+
+@synthesize window;
+@synthesize navController;
+@synthesize networkStatus;
+
+@synthesize hostReach;
+@synthesize internetReach;
+@synthesize wifiReach;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Parse setApplicationId:@"8NPPjp3T2LEek91NIVKiqega9R0wkmuZjhPL30w8" clientKey:@"mO26FqdsGL7ZE5BJpgY7SL4uUfm5XihRK75oppuo"];
-
-//    NSString *twitter = @"SachaGreif";
-//    NSString *title = @"Free Font: Hello Denver";
-//    NSString *url = @"http://www.hellodenver.org/";
-//    NSDate *today = [NSdate date];
-//
-//    NSDateComponents *dateComponents = [[NSDateComponents alloc]init];
-//    [dateComponents setDay:-1];
-//
-//    NSDate *yesterday = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:today options:0];
-//    
-//    NSLog(@"Today %@ Yesterday %@", date, yesterday);
-//    
-//    PFObject *post = [PFObject objectWithClassName:@"Post"];
-//    [post setObject:twitter forKey:@"twitter"];
-//    [post setObject:url forKey:@"url"];
-//    [post setObject:title forKey:@"title"];
-//    [post setObject:yesterday forKey:@"date"];
-//
-//    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (!error){
-//            NSLog(@"Saved post: %@", post);
-//        } else {
-//            NSLog(@"Save failed with error %@", error);
-//        }
-//    }];
+    [Parse offlineMessagesEnabled:NO];
+    
+    // Add some test data
+    // [self addPostWithTitle:@"The title" forTwitterHandle:@"jakescott" withUrl:@"http://" andDate:[NSDate date]];
+    
+    // Set up our app's global UIAppearance
+    [self setupAppearance];
+    
+    // Use Reachability to monitor connectivity
+    [self monitorReachability];
+    
+    self.postsViewController = [[PostsViewController alloc]initWithClassName:@"Post"];
+    self.postsViewController.date = [[NSDate date] beginningOfDay];
+    
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.postsViewController];
+    self.window.rootViewController = self.navController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setupAppearance
+{
+    [[UINavigationBar appearance]setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{
+                                UITextAttributeTextColor: [UIColor whiteColor],
+                         UITextAttributeTextShadowColor : [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
+                        UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+                                    UITextAttributeFont : [UIFont fontWithName:@"Futura-Medium" size:20.0]
+     }];
+    
+    // todo customize the next and previous buttons using this code: Get this from photoshop...
+    // Change the UIBarButtonItem apperance by setting a resizable background image for the edit button.
+    //    UIEdgeInsets insets = {0, 6, 0, 6};// Same as doing this: UIEdgeInsetsMake (top, left, bottom, right)
+    //    UIImage *barButtonImage = [[UIImage imageNamed:@"button_normal"] resizableImageWithCapInsets:insets];
+    //    [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+}
+
+#pragma mark - AppDelegate
+
+- (BOOL)isParseReachable
+{
+    return self.networkStatus != NotReachable;
+}
+
+- (void)monitorReachability
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+  
+    self.hostReach = [Reachability reachabilityWithHostname: @"api.parse.com"];
+    [self.hostReach startNotifier];
+    
+    self.internetReach = [Reachability reachabilityForInternetConnection];
+    [self.internetReach startNotifier];
+    
+    self.wifiReach = [Reachability reachabilityForLocalWiFi];
+    [self.wifiReach startNotifier];
+}
+
+- (void)reachabilityChanged:(NSNotification* )note
+{
+    Reachability *curReach = (Reachability *)[note object];
+    NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+    NSLog(@"Reachability changed: %@", curReach);
+    networkStatus = [curReach currentReachabilityStatus];
+}
+
+- (void)addPostWithTitle:(NSString *)title forTwitterHandle:(NSString *)twitter withUrl:(NSString *)url andDate:(NSDate *)date
+{    
+    PFObject *post = [PFObject objectWithClassName:@"Post"];
+    [post setObject:twitter forKey:@"twitter"];
+    [post setObject:url forKey:@"url"];
+    [post setObject:title forKey:@"title"];
+    [post setObject:date forKey:@"date"];
+    
+    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error){
+            NSLog(@"Saved post: %@", post);
+        } else {
+            NSLog(@"Save failed with error %@", error);
+        }
+     }];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
