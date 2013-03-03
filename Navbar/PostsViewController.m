@@ -7,9 +7,9 @@
 //
 
 #import "PostsViewController.h"
-#import "Parse/Parse.h"
 #import "NSDate+Calculations.h"
 #import "Reachability.h"
+#import "Parse/Parse.h"
 
 @interface PostsViewController () {
 
@@ -55,7 +55,7 @@
         UITextAttributeTextColor: [UIColor whiteColor],
         UITextAttributeTextShadowColor : [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-        UITextAttributeFont : [UIFont fontWithName:@"Futura-Medium" size:11.0]
+        UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:11.0]
     };
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:[self yesterdayLabelText] style:UIBarButtonItemStylePlain target:self action:@selector(navigateYesterday)];
@@ -208,7 +208,7 @@
         label.backgroundColor = [UIColor grayColor];
 
         label.textColor = [UIColor darkGrayColor];
-        label.font = [UIFont fontWithName:@"Futura-Medium" size:16];
+        label.font = [UIFont fontWithName:@"Montserrat-Bold" size:16];
         label.textAlignment = UITextAlignmentCenter;
         
         return label;
@@ -220,7 +220,7 @@
         label.backgroundColor = [UIColor lightGrayColor];
         
         label.textColor = [UIColor darkGrayColor];
-        label.font = [UIFont fontWithName:@"Futura-Medium" size:10];
+        label.font = [UIFont fontWithName:@"Montserrat-Regular" size:10];
         label.textAlignment = UITextAlignmentCenter;
 
         return label;
