@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
 
-//    [self setTitle:@"Navbar"]; // we gonna use a background image!
+    [self setTitle:@"Navbar"]; // we gonna use a background image!
 
     NSDictionary *styles = @{
         UITextAttributeTextColor: [UIColor whiteColor],
@@ -232,6 +232,11 @@
     return 44;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 88;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"Cell";
     
@@ -240,12 +245,17 @@
         cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    NSURL *url = [[NSURL alloc]initWithString:[object objectForKey:@"url"]];
+    NSString *urlString = [object objectForKey:@"url"];
+    if (urlString)
+    {
+        NSURL *url = [[NSURL alloc]initWithString:[object objectForKey:@"url"]];
+        NSString *host = [url host];
+        cell.detailTextLabel.text = host;
+    } else {
+        cell.detailTextLabel.text = @"No url, yikes!";
+    }
     
-    NSString *host = [url host];
-    
-    cell.textLabel.text = [object objectForKey:@"title"];
-    cell.detailTextLabel.text = host; // todo show only the domain
+    cell.textLabel.text = [object objectForKey:@"title"] ? [object objectForKey:@"title"] : @"No title umm woops!";
     
     return cell;
 }

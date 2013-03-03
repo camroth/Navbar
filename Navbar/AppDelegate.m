@@ -65,10 +65,13 @@
     [[UINavigationBar appearance] setTitleTextAttributes:
      @{
                                 UITextAttributeTextColor: [UIColor whiteColor],
-                         UITextAttributeTextShadowColor : [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-                        UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-                                    UITextAttributeFont : [UIFont fontWithName:@"Futura-Medium" size:20.0]
+                         UITextAttributeTextShadowColor : [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f],
+                        UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
+                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Bold" size:20.0]
      }];
+    
+    NSArray *openSansFonts = [UIFont fontNamesForFamilyName:@"Open Sans"];
+    NSLog(@"Open Sans %@", openSansFonts);
     
     // todo customize the next and previous buttons using this code: Get this from photoshop...
     // Change the UIBarButtonItem apperance by setting a resizable background image for the edit button.
