@@ -11,8 +11,12 @@
 #import "Reachability.h"
 #import "Parse/Parse.h"
 #import "PostCell.h"
+#import "PostNoDataCell.h"
+#import "PostHeaderCell.h"
 
 static NSString *PostCellIdentifier = @"PostCell";
+static NSString *PostNoDataCellIdentifier = @"PostNoDataCell";
+static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 
 @interface PostsViewController () {
 
@@ -54,9 +58,15 @@ static NSString *PostCellIdentifier = @"PostCell";
     
     UINib *cellNib = [UINib nibWithNibName:PostCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:PostCellIdentifier];
+    
+    cellNib = [UINib nibWithNibName:PostNoDataCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:PostNoDataCellIdentifier];
+    
+    cellNib = [UINib nibWithNibName:PostHeaderCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:PostHeaderCellIdentifier];
 
     [self setTitle:@"Navbar"]; // we gonna use a background image!
-
+    
     NSDictionary *styles = @{
         UITextAttributeTextColor: [UIColor whiteColor],
         UITextAttributeTextShadowColor : [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
@@ -69,6 +79,8 @@ static NSString *PostCellIdentifier = @"PostCell";
 
     [self.navigationItem.leftBarButtonItem setTitleTextAttributes:styles forState:UIControlStateNormal];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:styles forState:UIControlStateNormal];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)navigateYesterday
@@ -93,13 +105,6 @@ static NSString *PostCellIdentifier = @"PostCell";
 {
     self.navigationItem.leftBarButtonItem.title = [self yesterdayLabelText];
     self.navigationItem.rightBarButtonItem.title = [self tomorrowLabelText];
-}
-
-- (NSString *)todayLabelText
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateStyle:NSDateFormatterFullStyle];
-    return [formatter stringFromDate:self.date];
 }
 
 - (NSString *)yesterdayLabelText
@@ -208,35 +213,17 @@ static NSString *PostCellIdentifier = @"PostCell";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        
-        label.text = [self todayLabelText];
-        label.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:102/255.0f blue:0.0f alpha:1.0f];
-        label.backgroundColor = [UIColor grayColor];
-
-        label.textColor = [UIColor darkGrayColor];
-        label.font = [UIFont fontWithName:@"Montserrat-Bold" size:16];
-        label.textAlignment = UITextAlignmentCenter;
-        
-        return label;
-    } else {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        
-        label.text = [self noPostsLabelText];
-        label.backgroundColor = [UIColor colorWithRed:255.0f/255.0f green:102/255.0f blue:0.0f alpha:1.0f];
-        label.backgroundColor = [UIColor lightGrayColor];
-        
-        label.textColor = [UIColor darkGrayColor];
-        label.font = [UIFont fontWithName:@"Montserrat-Regular" size:10];
-        label.textAlignment = UITextAlignmentCenter;
-
-        return label;
+        PostHeaderCell *cell = (PostHeaderCell *)[tableView dequeueReusableCellWithIdentifier: PostHeaderCellIdentifier];
+        [cell configureForDate:self.date];
+        return cell;
     }
+    
+    return [tableView dequeueReusableCellWithIdentifier: PostNoDataCellIdentifier];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 44;
+    return (section == 0) ? 44 : 88;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

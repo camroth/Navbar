@@ -8,7 +8,7 @@
 
 #import "PostCell.h"
 #import "UIImageView+WebCache.h"
-//#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIImage+RoundedCornerAdditions.h"
 
 @implementation PostCell
 
@@ -38,6 +38,12 @@
     
     // self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableCellGradient"]];
     // self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectedTableCellGradient"]];
+    
+    self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:14];
+    self.titleLabel.textColor = [UIColor darkGrayColor];
+    
+    self.urlLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:12];
+    self.urlLabel.textColor = [UIColor lightGrayColor];
 }
 
 -(void)prepareForReuse
@@ -64,17 +70,43 @@
     
     NSString *titleString = [post objectForKey:@"title"];
     self.titleLabel.text = titleString ? titleString : @"No title umm woops!";
+
+    CGFloat width = 240.0f;
+    CGFloat urlHeight = 22.0f;
+    
+    // Resize the title rect based on content
+    CGRect rect = CGRectMake(10, 0, width, 88);
+    self.titleLabel.frame = rect;
+    [self.titleLabel sizeToFit];
+    rect.size.height = self.titleLabel.frame.size.height;
+    self.titleLabel.frame = rect;
+    
+    // Vertically position the labels
+    CGFloat height = self.titleLabel.frame.size.height + urlHeight;
+    CGFloat y = ceilf(self.frame.size.height / 2.0f) - ceilf(height / 2.0f);
+    
+    rect = CGRectMake(self.titleLabel.frame.origin.x, y, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height);
+    self.titleLabel.frame = rect;
+    
+    // Position the url based on the title label
+    rect = CGRectMake(self.titleLabel.frame.origin.x, self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height, width, urlHeight);
+    self.urlLabel.frame = rect;
+    
     
     NSString *twitter = [post objectForKey:@"twitter"];
     if (twitter)
     {
-        NSString *twitterUrlString = [NSString stringWithFormat:@"https://api.twitter.com/1/users/profile_image?screen_name=%@", twitter];
-        NSURL *twitterUrl = [NSURL URLWithString:twitterUrlString];
-        //[self.twitterImageView setImageWithURL:twitterUrl placeholderImage:[UIImage imageNamed:@"sachag"]];
-        [self.twitterImageView setImageWithURL:twitterUrl];
-    } else {
-        // todo change placeholder to be the navbar logo
-        //[self.twitterImageView setImage:[UIImage imageNamed:@"sachag"]];
+        NSString *twitterUrl = [NSString stringWithFormat:@"https://api.twitter.com/1/users/profile_image?screen_name=%@", twitter];
+        NSURL *url = [NSURL URLWithString:twitterUrl];
+        
+        [self.twitterImageView setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+            if (!error) {
+                // add rounded corners
+                self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:22] intValue] borderSize:0];
+            } else {
+                NSLog(@"Error downloading twitter image %@", error);
+            }
+        }];        
     }
 }
 
