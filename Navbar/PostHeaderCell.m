@@ -7,6 +7,7 @@
 //
 
 #import "PostHeaderCell.h"
+#import "UIColor+ImageFromColor.h"
 
 @implementation PostHeaderCell
 
@@ -26,13 +27,14 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateStyle:NSDateFormatterFullStyle];
    
-    self.backgroundColor = [UIColor darkGrayColor];
+    self.backgroundColor = [UIColor clearColor];
     
     self.dateLabel.text = [formatter stringFromDate:date];
     
-    self.dateLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:16];
-    self.dateLabel.textColor = [UIColor whiteColor];
+    self.dateLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:16];
+    self.dateLabel.textColor = [UIColor darkGrayColor];
 
+    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:244/255.0f green:244/255.0f blue:244/255.0f alpha:1.0] imageFromColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

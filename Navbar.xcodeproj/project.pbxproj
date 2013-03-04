@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1C24EAF01EDE412BA9014DE5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D95E68088548049721A0F0 /* libPods.a */; };
+		D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */; };
+		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
+		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
 		D7B1216716E4038600D33170 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215816E4038600D33170 /* LICENSE.txt */; };
 		D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */; };
 		D7B1216916E4038600D33170 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */; };
@@ -23,8 +26,6 @@
 		D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */; };
 		D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */; };
 		D7B1217716E410C000D33170 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B1217616E410C000D33170 /* PostCell.m */; };
-		D7B1217916E4196500D33170 /* stevejobs_120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7B1217816E4196500D33170 /* stevejobs_120.jpg */; };
-		D7B1217D16E41DB100D33170 /* sachag.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B1217C16E41DB100D33170 /* sachag.png */; };
 		D7B1217F16E429FC00D33170 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B1217E16E429FC00D33170 /* ImageIO.framework */; };
 		D7B1218616E4330A00D33170 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B1218116E4330A00D33170 /* UIImage+AlphaAdditions.m */; };
 		D7B1218716E4330A00D33170 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B1218316E4330A00D33170 /* UIImage+ResizeAdditions.m */; };
@@ -34,6 +35,8 @@
 		D7B1219816E43CE700D33170 /* PostNoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B1219716E43CE700D33170 /* PostNoDataCell.xib */; };
 		D7B1219A16E43F7700D33170 /* PostHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B1219916E43F7700D33170 /* PostHeaderCell.xib */; };
 		D7B121A016E43FA700D33170 /* PostHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B1219F16E43FA700D33170 /* PostHeaderCell.m */; };
+		D7B528D916E45CFB00EE137E /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B528D416E45CFB00EE137E /* arrow_left.png */; };
+		D7B528DB16E45CFB00EE137E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B528D616E45CFB00EE137E /* arrow_right.png */; };
 		D7C2482316E1A6AF003962D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482216E1A6AF003962D5 /* UIKit.framework */; };
 		D7C2482516E1A6AF003962D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482416E1A6AF003962D5 /* Foundation.framework */; };
 		D7C2482716E1A6AF003962D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482616E1A6AF003962D5 /* CoreGraphics.framework */; };
@@ -65,6 +68,10 @@
 /* Begin PBXFileReference section */
 		73D95E68088548049721A0F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EF161242AE4A75A600E8A6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D76684BE16E47C71003A150C /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
+		D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
+		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
+		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		D7B1215816E4038600D33170 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -81,8 +88,6 @@
 		D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		D7B1217516E410C000D33170 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		D7B1217616E410C000D33170 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
-		D7B1217816E4196500D33170 /* stevejobs_120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stevejobs_120.jpg; sourceTree = "<group>"; };
-		D7B1217C16E41DB100D33170 /* sachag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sachag.png; sourceTree = "<group>"; };
 		D7B1217E16E429FC00D33170 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		D7B1218016E4330A00D33170 /* UIImage+AlphaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+AlphaAdditions.h"; path = "Navbar/UIImage+AlphaAdditions.h"; sourceTree = "<group>"; };
 		D7B1218116E4330A00D33170 /* UIImage+AlphaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+AlphaAdditions.m"; path = "Navbar/UIImage+AlphaAdditions.m"; sourceTree = "<group>"; };
@@ -97,6 +102,8 @@
 		D7B1219916E43F7700D33170 /* PostHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostHeaderCell.xib; sourceTree = "<group>"; };
 		D7B1219E16E43FA700D33170 /* PostHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHeaderCell.h; sourceTree = "<group>"; };
 		D7B1219F16E43FA700D33170 /* PostHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHeaderCell.m; sourceTree = "<group>"; };
+		D7B528D416E45CFB00EE137E /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		D7B528D616E45CFB00EE137E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		D7C2481F16E1A6AF003962D5 /* Navbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C2482216E1A6AF003962D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7C2482416E1A6AF003962D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,8 +201,10 @@
 		D7B1216616E4038600D33170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D7B1217C16E41DB100D33170 /* sachag.png */,
-				D7B1217816E4196500D33170 /* stevejobs_120.jpg */,
+				D76684C116E49D20003A150C /* arrow_left@2x.png */,
+				D76684C216E49D20003A150C /* arrow_right@2x.png */,
+				D7B528D416E45CFB00EE137E /* arrow_left.png */,
+				D7B528D616E45CFB00EE137E /* arrow_right.png */,
 				D7C2483416E1A6AF003962D5 /* Default.png */,
 				D7C2483616E1A6AF003962D5 /* Default@2x.png */,
 				D7C2483816E1A6AF003962D5 /* Default-568h@2x.png */,
@@ -221,6 +230,8 @@
 				D7B1218316E4330A00D33170 /* UIImage+ResizeAdditions.m */,
 				D7B1218416E4330A00D33170 /* UIImage+RoundedCornerAdditions.h */,
 				D7B1218516E4330A00D33170 /* UIImage+RoundedCornerAdditions.m */,
+				D76684BE16E47C71003A150C /* UIColor+ImageFromColor.h */,
+				D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */,
 			);
 			name = "UIImage Categories";
 			sourceTree = "<group>";
@@ -408,11 +419,13 @@
 				D7B1217216E4038600D33170 /* OpenSans-Regular.ttf in Resources */,
 				D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */,
 				D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */,
-				D7B1217916E4196500D33170 /* stevejobs_120.jpg in Resources */,
-				D7B1217D16E41DB100D33170 /* sachag.png in Resources */,
 				D7B1219116E435BA00D33170 /* PostCell.xib in Resources */,
 				D7B1219816E43CE700D33170 /* PostNoDataCell.xib in Resources */,
 				D7B1219A16E43F7700D33170 /* PostHeaderCell.xib in Resources */,
+				D7B528D916E45CFB00EE137E /* arrow_left.png in Resources */,
+				D7B528DB16E45CFB00EE137E /* arrow_right.png in Resources */,
+				D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */,
+				D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +463,7 @@
 				D7B1218816E4330A00D33170 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				D7B1219616E43C6200D33170 /* PostNoDataCell.m in Sources */,
 				D7B121A016E43FA700D33170 /* PostHeaderCell.m in Sources */,
+				D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

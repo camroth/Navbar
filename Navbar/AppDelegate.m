@@ -11,6 +11,7 @@
 #import "PostsViewController.h"
 #import "NSDate+Calculations.h"
 #import "Reachability.h"
+#import "UIColor+ImageFromColor.h"
 
 @interface AppDelegate() {
     
@@ -42,17 +43,19 @@
     // Add some test data
     // [self addPostWithTitle:@"The title" forTwitterHandle:@"jakescott" withUrl:@"http://" andDate:[NSDate date]];
     
-    // Set up our app's global UIAppearance
-    [self setupAppearance];
-    
     // Use Reachability to monitor connectivity
     [self monitorReachability];
     
+    // Setup the posts controller
     self.postsViewController = [[PostsViewController alloc]initWithClassName:@"Post"];
     self.postsViewController.date = [[NSDate date] beginningOfDay];
     
+    // Setup the nav controller
     self.navController = [[UINavigationController alloc] initWithRootViewController:self.postsViewController];
     self.window.rootViewController = self.navController;
+    
+    // Set up our app's global UIAppearance
+    [self setupAppearance];
     
     [self.window makeKeyAndVisible];
     
@@ -61,23 +64,25 @@
 
 - (void)setupAppearance
 {
-    [[UINavigationBar appearance]setTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:
-     @{
+    // Set background color of the navbar
+    // Blue
+    //[[UINavigationBar appearance] setBackgroundImage:[[UIColor colorWithRed:36/255.0 green:137/255.0 blue:197/255.0 alpha:1.0] imageFromColor] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIColor colorWithRed:41/255.0 green:82/255.0 blue:88/255.0 alpha:1.0] imageFromColor] forBarMetrics:UIBarMetricsDefault];
+    
+    
+    // Style the navbar title... todo remove this when we add a logo..
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
                                 UITextAttributeTextColor: [UIColor whiteColor],
-                         UITextAttributeTextShadowColor : [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f],
                         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:20.0]
+                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:15.0]
      }];
     
-    NSArray *openSansFonts = [UIFont fontNamesForFamilyName:@"Open Sans"];
-    NSLog(@"Open Sans %@", openSansFonts);
+    [self.navController.navigationBar setTitleVerticalPositionAdjustment:3.0f forBarMetrics:UIBarMetricsDefault];
     
-    // todo customize the next and previous buttons using this code: Get this from photoshop...
-    // Change the UIBarButtonItem apperance by setting a resizable background image for the edit button.
-    //    UIEdgeInsets insets = {0, 6, 0, 6};// Same as doing this: UIEdgeInsetsMake (top, left, bottom, right)
-    //    UIImage *barButtonImage = [[UIImage imageNamed:@"button_normal"] resizableImageWithCapInsets:insets];
-    //    [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    if ([self.navController.navigationBar respondsToSelector:@selector(shadowImage)]) {
+        self.navController.navigationBar.shadowImage = [[UIImage alloc] init];
+    }
 }
 
 #pragma mark - AppDelegate

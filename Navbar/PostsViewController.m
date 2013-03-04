@@ -13,6 +13,7 @@
 #import "PostCell.h"
 #import "PostNoDataCell.h"
 #import "PostHeaderCell.h"
+#import "UIColor+ImageFromColor.h"
 
 static NSString *PostCellIdentifier = @"PostCell";
 static NSString *PostNoDataCellIdentifier = @"PostNoDataCell";
@@ -37,9 +38,12 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
         self.pullToRefreshEnabled = YES;
         self.paginationEnabled = YES;
         self.objectsPerPage = 25;
+        self.loadingViewEnabled = NO;
     }
+    
     return self;
 }
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -65,22 +69,40 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     cellNib = [UINib nibWithNibName:PostHeaderCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:PostHeaderCellIdentifier];
 
-    [self setTitle:@"Navbar"]; // we gonna use a background image!
+    [self setTitle:@"NAVBAR"]; // we gonna use a background image!
     
-    NSDictionary *styles = @{
-        UITextAttributeTextColor: [UIColor whiteColor],
-        UITextAttributeTextShadowColor : [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
-        UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
-        UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:11.0]
-    };
+    // Remove table cell separator
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:[self yesterdayLabelText] style:UIBarButtonItemStylePlain target:self action:@selector(navigateYesterday)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:[self tomorrowLabelText] style:UIBarButtonItemStylePlain target:self action:@selector(navigateTomorrow)];
+    self.navigationItem.leftBarButtonItem = [self addButtonWithImageNamed:@"arrow_left" withAction:@selector(navigateYesterday) adjustX:-6.0f];
+    self.navigationItem.rightBarButtonItem = [self addButtonWithImageNamed:@"arrow_right" withAction:@selector(navigateTomorrow) adjustX:6.0f];
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
-    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:styles forState:UIControlStateNormal];
-    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:styles forState:UIControlStateNormal];
+    self.parentViewController.view.backgroundColor = [UIColor whiteColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+}
+
+- (UIBarButtonItem *)addButtonWithImageNamed:(NSString *)imageName withAction:(SEL)action adjustX:(CGFloat)x
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(x, 0.0, 44, 44);
+
+    UIImage *image = [UIImage imageNamed:imageName];
+    [button setImage:image forState:UIControlStateNormal];
+    [button setImage:image forState:UIControlStateHighlighted];
     
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [button setBackgroundImage:[[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3f]imageFromColor] forState:UIControlStateHighlighted]; // alpha trick
+    [button setBackgroundImage:[[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1f]imageFromColor] forState:UIControlStateNormal];
+    
+    //[button setBackgroundImage:[[UIColor colorWithRed:230/255.0f green:108/255.0f blue:105/255.0f alpha:1.0f]imageFromColor] forState:UIControlStateNormal];
+    
+    
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, button.frame.size.width, button.frame.size.height)];
+    [buttonView addSubview:button];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:buttonView];
 }
 
 - (void)navigateYesterday
@@ -101,12 +123,6 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     [self.navigationController pushViewController:tomorrowsPosts animated:YES];
 }
 
-- (void)updateLabels
-{
-    self.navigationItem.leftBarButtonItem.title = [self yesterdayLabelText];
-    self.navigationItem.rightBarButtonItem.title = [self tomorrowLabelText];
-}
-
 - (NSString *)yesterdayLabelText
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -119,11 +135,6 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MMM d"];
     return [formatter stringFromDate:[self.date tomorrow]];
-}
-
-- (NSString *)noPostsLabelText
-{
-    return @"Sorry, no posts today yet. Why not check the previous day?";
 }
 
 - (void)viewDidUnload

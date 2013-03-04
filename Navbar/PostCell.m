@@ -9,6 +9,7 @@
 #import "PostCell.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+RoundedCornerAdditions.h"
+#import "UIColor+ImageFromColor.h"
 
 @implementation PostCell
 
@@ -35,9 +36,8 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    // self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableCellGradient"]];
-    // self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectedTableCellGradient"]];
+
+    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0]imageFromColor]];
     
     self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:14];
     self.titleLabel.textColor = [UIColor darkGrayColor];
@@ -102,7 +102,7 @@
         [self.twitterImageView setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
             if (!error) {
                 // add rounded corners
-                self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:22] intValue] borderSize:0];
+                self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:24] intValue] borderSize:1];
             } else {
                 NSLog(@"Error downloading twitter image %@", error);
             }

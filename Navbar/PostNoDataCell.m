@@ -7,6 +7,7 @@
 //
 
 #import "PostNoDataCell.h"
+#import "UIColor+ImageFromColor.h"
 
 @implementation PostNoDataCell
 
@@ -32,8 +33,7 @@
 {
     [super awakeFromNib];
     
-    // self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableCellGradient"]];
-    // self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SelectedTableCellGradient"]];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor whiteColor] imageFromColor]];
     
     self.noDataLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:14];
     self.noDataLabel.textColor = [UIColor lightGrayColor];
