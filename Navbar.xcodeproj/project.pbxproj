@@ -22,6 +22,11 @@
 		D7B1217216E4038600D33170 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216316E4038600D33170 /* OpenSans-Regular.ttf */; };
 		D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */; };
 		D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */; };
+		D7B1217716E410C000D33170 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B1217616E410C000D33170 /* PostCell.m */; };
+		D7B1217916E4196500D33170 /* stevejobs_120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7B1217816E4196500D33170 /* stevejobs_120.jpg */; };
+		D7B1217B16E41A1F00D33170 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B1217A16E41A1F00D33170 /* PostCell.xib */; };
+		D7B1217D16E41DB100D33170 /* sachag.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B1217C16E41DB100D33170 /* sachag.png */; };
+		D7B1217F16E429FC00D33170 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B1217E16E429FC00D33170 /* ImageIO.framework */; };
 		D7C2482316E1A6AF003962D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482216E1A6AF003962D5 /* UIKit.framework */; };
 		D7C2482516E1A6AF003962D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482416E1A6AF003962D5 /* Foundation.framework */; };
 		D7C2482716E1A6AF003962D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2482616E1A6AF003962D5 /* CoreGraphics.framework */; };
@@ -67,6 +72,12 @@
 		D7B1216316E4038600D33170 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		D7B1216416E4038600D33170 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		D7B1216516E4038600D33170 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		D7B1217516E410C000D33170 /* PostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		D7B1217616E410C000D33170 /* PostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		D7B1217816E4196500D33170 /* stevejobs_120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stevejobs_120.jpg; sourceTree = "<group>"; };
+		D7B1217A16E41A1F00D33170 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCell.xib; path = Resources/PostCell.xib; sourceTree = "<group>"; };
+		D7B1217C16E41DB100D33170 /* sachag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sachag.png; sourceTree = "<group>"; };
+		D7B1217E16E429FC00D33170 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		D7C2481F16E1A6AF003962D5 /* Navbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C2482216E1A6AF003962D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7C2482416E1A6AF003962D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B1217F16E429FC00D33170 /* ImageIO.framework in Frameworks */,
 				D7C2485416E1A8B5003962D5 /* Accounts.framework in Frameworks */,
 				D7C2485516E1A8B5003962D5 /* AdSupport.framework in Frameworks */,
 				D7C2485616E1A8B5003962D5 /* AudioToolbox.framework in Frameworks */,
@@ -163,6 +175,8 @@
 		D7B1216616E4038600D33170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7B1217C16E41DB100D33170 /* sachag.png */,
+				D7B1217816E4196500D33170 /* stevejobs_120.jpg */,
 				D7C2483416E1A6AF003962D5 /* Default.png */,
 				D7C2483616E1A6AF003962D5 /* Default@2x.png */,
 				D7C2483816E1A6AF003962D5 /* Default-568h@2x.png */,
@@ -191,6 +205,7 @@
 		D7C2482116E1A6AF003962D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7B1217E16E429FC00D33170 /* ImageIO.framework */,
 				D7C2486316E1AAAB003962D5 /* Parse.framework */,
 				D7C2484716E1A8B4003962D5 /* Accounts.framework */,
 				D7C2484816E1A8B4003962D5 /* AdSupport.framework */,
@@ -221,6 +236,9 @@
 				D7C2483216E1A6AF003962D5 /* AppDelegate.m */,
 				D7C2483D16E1A6AF003962D5 /* PostsViewController.h */,
 				D7C2483E16E1A6AF003962D5 /* PostsViewController.m */,
+				D7B1217516E410C000D33170 /* PostCell.h */,
+				D7B1217616E410C000D33170 /* PostCell.m */,
+				D7B1217A16E41A1F00D33170 /* PostCell.xib */,
 				D7C2486816E2BAFD003962D5 /* NSDate+Calculations.h */,
 				D7C2486916E2BAFD003962D5 /* NSDate+Calculations.m */,
 				D7C2489E16E2C78E003962D5 /* MainWindow.xib */,
@@ -303,6 +321,9 @@
 				D7B1217216E4038600D33170 /* OpenSans-Regular.ttf in Resources */,
 				D7B1217316E4038600D33170 /* OpenSans-Semibold.ttf in Resources */,
 				D7B1217416E4038600D33170 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				D7B1217916E4196500D33170 /* stevejobs_120.jpg in Resources */,
+				D7B1217B16E41A1F00D33170 /* PostCell.xib in Resources */,
+				D7B1217D16E41DB100D33170 /* sachag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +355,7 @@
 				D7C2483316E1A6AF003962D5 /* AppDelegate.m in Sources */,
 				D7C2483F16E1A6AF003962D5 /* PostsViewController.m in Sources */,
 				D7C2486A16E2BAFD003962D5 /* NSDate+Calculations.m in Sources */,
+				D7B1217716E410C000D33170 /* PostCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +441,10 @@
 				GCC_PREFIX_HEADER = "Navbar/Navbar-Prefix.pch";
 				INFOPLIST_FILE = "Navbar/Navbar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-fobjc-arc";
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,7 +462,10 @@
 				GCC_PREFIX_HEADER = "Navbar/Navbar-Prefix.pch";
 				INFOPLIST_FILE = "Navbar/Navbar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = "-fobjc-arc";
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

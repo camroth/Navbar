@@ -10,6 +10,9 @@
 #import "NSDate+Calculations.h"
 #import "Reachability.h"
 #import "Parse/Parse.h"
+#import "PostCell.h"
+
+static NSString *PostCellIdentifier = @"PostCell";
 
 @interface PostsViewController () {
 
@@ -48,6 +51,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UINib *cellNib = [UINib nibWithNibName:PostCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:PostCellIdentifier];
 
     [self setTitle:@"Navbar"]; // we gonna use a background image!
 
@@ -156,6 +162,7 @@
 - (void)objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
+
     // This method is called every time objects are loaded from Parse via the PFQuery
     if (error) {
         NSLog(@"Could not load objects %@", error);
@@ -238,25 +245,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    static NSString *CellIdentifier = @"Cell";
-    
-    PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    NSString *urlString = [object objectForKey:@"url"];
-    if (urlString)
-    {
-        NSURL *url = [[NSURL alloc]initWithString:[object objectForKey:@"url"]];
-        NSString *host = [url host];
-        cell.detailTextLabel.text = host;
-    } else {
-        cell.detailTextLabel.text = @"No url, yikes!";
-    }
-    
-    cell.textLabel.text = [object objectForKey:@"title"] ? [object objectForKey:@"title"] : @"No title umm woops!";
-    
+    PostCell *cell = (PostCell *)[tableView dequeueReusableCellWithIdentifier:PostCellIdentifier];
+    [cell configureForPost:object];
     return cell;
 }
 

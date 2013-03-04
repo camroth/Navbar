@@ -67,7 +67,7 @@
                                 UITextAttributeTextColor: [UIColor whiteColor],
                          UITextAttributeTextShadowColor : [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1f],
                         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Bold" size:20.0]
+                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:20.0]
      }];
     
     NSArray *openSansFonts = [UIFont fontNamesForFamilyName:@"Open Sans"];
