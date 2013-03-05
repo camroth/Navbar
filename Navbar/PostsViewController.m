@@ -71,6 +71,10 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 
     [self setTitle:@"NAVBAR"]; // we gonna use a background image!
     
+//    UIImageView *logoImageVIew = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navbar_logo"]];
+//    self.navigationItem.titleView = logoImageVIew;
+//    self.navigationItem.titleView.frame = CGRectMake(0, 0, 320, 44);
+    
     // Remove table cell separator
     [self.tableView setSeparatorColor:[UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]];
     

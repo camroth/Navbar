@@ -70,12 +70,11 @@
     
     [[UINavigationBar appearance] setBackgroundImage:[[UIColor colorWithRed:41/255.0 green:82/255.0 blue:88/255.0 alpha:1.0] imageFromColor] forBarMetrics:UIBarMetricsDefault];
     
-    
     // Style the navbar title... todo remove this when we add a logo..
     [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                UITextAttributeTextColor: [UIColor whiteColor],
+                                UITextAttributeTextColor: [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0],
                         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:15.0]
+                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Bold" size:15.0]
      }];
     
     [self.navController.navigationBar setTitleVerticalPositionAdjustment:3.0f forBarMetrics:UIBarMetricsDefault];

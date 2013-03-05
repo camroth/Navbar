@@ -11,6 +11,9 @@
 		D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
+		D76684CC16E4A7E3003A150C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CB16E4A7E3003A150C /* Default.png */; };
+		D76684CE16E4A7EF003A150C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CD16E4A7EF003A150C /* Default@2x.png */; };
+		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
 		D7B1216716E4038600D33170 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215816E4038600D33170 /* LICENSE.txt */; };
 		D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */; };
 		D7B1216916E4038600D33170 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */; };
@@ -72,6 +75,9 @@
 		D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
+		D76684CB16E4A7E3003A150C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Default.png; sourceTree = "<group>"; };
+		D76684CD16E4A7EF003A150C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../Default@2x.png"; sourceTree = "<group>"; };
+		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
 		D7B1215816E4038600D33170 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 		D7B1216616E4038600D33170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */,
+				D76684CD16E4A7EF003A150C /* Default@2x.png */,
+				D76684CB16E4A7E3003A150C /* Default.png */,
 				D76684C116E49D20003A150C /* arrow_left@2x.png */,
 				D76684C216E49D20003A150C /* arrow_right@2x.png */,
 				D7B528D416E45CFB00EE137E /* arrow_left.png */,
@@ -426,6 +435,9 @@
 				D7B528DB16E45CFB00EE137E /* arrow_right.png in Resources */,
 				D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */,
 				D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */,
+				D76684CC16E4A7E3003A150C /* Default.png in Resources */,
+				D76684CE16E4A7EF003A150C /* Default@2x.png in Resources */,
+				D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
