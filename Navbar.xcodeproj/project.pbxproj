@@ -14,6 +14,7 @@
 		D76684CC16E4A7E3003A150C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CB16E4A7E3003A150C /* Default.png */; };
 		D76684CE16E4A7EF003A150C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CD16E4A7EF003A150C /* Default@2x.png */; };
 		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
+		D7AF2D5216E728130089DA48 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AF2D5116E728130089DA48 /* OpenInChromeController.m */; };
 		D7B1216716E4038600D33170 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215816E4038600D33170 /* LICENSE.txt */; };
 		D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */; };
 		D7B1216916E4038600D33170 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */; };
@@ -78,6 +79,8 @@
 		D76684CB16E4A7E3003A150C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Default.png; sourceTree = "<group>"; };
 		D76684CD16E4A7EF003A150C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../Default@2x.png"; sourceTree = "<group>"; };
 		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
+		D7AF2D5016E727E70089DA48 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInChromeController.h; sourceTree = "<group>"; };
+		D7AF2D5116E728130089DA48 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInChromeController.m; sourceTree = "<group>"; };
 		D7B1215816E4038600D33170 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		D7B1215A16E4038600D33170 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -174,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7AF2D4F16E727C10089DA48 /* OpenInChromeController */ = {
+			isa = PBXGroup;
+			children = (
+				D7AF2D5016E727E70089DA48 /* OpenInChromeController.h */,
+				D7AF2D5116E728130089DA48 /* OpenInChromeController.m */,
+			);
+			name = OpenInChromeController;
+			sourceTree = "<group>";
+		};
 		D7B1215616E4038600D33170 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +236,7 @@
 		D7B1218916E433CC00D33170 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				D7AF2D4F16E727C10089DA48 /* OpenInChromeController */,
 				D7B1218B16E433F500D33170 /* NSDate Categories */,
 				D7B1218A16E433E400D33170 /* UIImage Categories */,
 			);
@@ -476,6 +489,7 @@
 				D7B1219616E43C6200D33170 /* PostNoDataCell.m in Sources */,
 				D7B121A016E43FA700D33170 /* PostHeaderCell.m in Sources */,
 				D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */,
+				D7AF2D5216E728130089DA48 /* OpenInChromeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
