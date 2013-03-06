@@ -14,13 +14,14 @@
 #import "PostNoDataCell.h"
 #import "PostHeaderCell.h"
 #import "UIColor+ImageFromColor.h"
+#import "OpenInChromeController.h"
 
 static NSString *PostCellIdentifier = @"PostCell";
 static NSString *PostNoDataCellIdentifier = @"PostNoDataCell";
 static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 
 @interface PostsViewController () {
-
+    OpenInChromeController *chromeController;
 }
 
 @end
@@ -59,6 +60,8 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    chromeController = [[OpenInChromeController alloc]init];
     
     UINib *cellNib = [UINib nibWithNibName:PostCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:PostCellIdentifier];
@@ -199,11 +202,9 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     
     BOOL isParseReachable = (BOOL)[[UIApplication sharedApplication].delegate performSelector:@selector(isParseReachable)];
     if (!isParseReachable) {
-        //NSLog(@"offline - cache only");
         query.cachePolicy = kPFCachePolicyCacheOnly;
     } else {
         if (self.objects.count == 0) {
-            //NSLog(@"online - cache then network");
             query.cachePolicy = kPFCachePolicyCacheThenNetwork;
         }
     }
@@ -255,6 +256,33 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PFObject *post = [self.objects objectAtIndex:indexPath.row];
+    NSString *url = [post objectForKey:@"url"];
+    if (url) {
+        NSURL *nsUrl = [NSURL URLWithString:url];
+        if ([chromeController isChromeInstalled]) {
+            BOOL success = [chromeController openInChrome:nsUrl withCallbackURL:nil createNewTab:YES];
+            NSLog(@"chrome success %c", success);
+        } else {
+            NSLog(@"safari");
+            [[UIApplication sharedApplication] openURL:nsUrl];
+        }
+    }
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

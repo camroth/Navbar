@@ -12,6 +12,7 @@
 #import "NSDate+Calculations.h"
 #import "Reachability.h"
 #import "UIColor+ImageFromColor.h"
+#import "OpenInChromeController.h"
 
 @interface AppDelegate() {
     
