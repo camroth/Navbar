@@ -257,17 +257,42 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PFObject *post = [self.objects objectAtIndex:indexPath.row];
+
     NSString *url = [post objectForKey:@"url"];
     if (url) {
-        NSURL *nsUrl = [NSURL URLWithString:url];
-        if ([chromeController isChromeInstalled]) {
-            BOOL success = [chromeController openInChrome:nsUrl withCallbackURL:nil createNewTab:YES];
-            NSLog(@"chrome success %c", success);
-        } else {
-            NSLog(@"safari");
-            [[UIApplication sharedApplication] openURL:nsUrl];
-        }
+        [self openURL:url];
     }
+}
+
+- (void)openURL:(NSString *)url
+{
+    NSURL *nsUrl = [NSURL URLWithString:url];
+    if ([chromeController isChromeInstalled] && [self openInChromeUserSetting]) {
+        [chromeController openInChrome:nsUrl withCallbackURL:nil createNewTab:YES];
+        return;
+    } else {
+        [[UIApplication sharedApplication] openURL:nsUrl];
+    }
+}
+
+- (BOOL)openInChromeUserSetting
+{
+    NSString *useChromeSetting = [[NSUserDefaults standardUserDefaults] stringForKey:@"OpenLinksInChrome"];
+
+//    NSLog(@"Use chrome setting %@", useChromeSetting);
+    
+    if (!useChromeSetting) {
+//        NSLog(@"Eek");
+        return NO;
+    }
+    
+    BOOL result = [useChromeSetting isEqualToString:@"1"]  ? YES : NO;
+//    if (result) {
+//        NSLog(@"use chrome");
+//    } else {
+//        NSLog(@"Don't use chrome");
+//    }
+    return result;
 }
 
 @end
