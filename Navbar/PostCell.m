@@ -96,13 +96,14 @@
     NSString *twitter = [post objectForKey:@"twitter"];
     if (twitter)
     {
-        NSString *twitterUrl = [NSString stringWithFormat:@"https://api.twitter.com/1/users/profile_image?screen_name=%@", twitter];
+        // https://api.twitter.com/1/users/profile_image?size=normal&screen_name=jakescott
+        NSString *twitterUrl = [NSString stringWithFormat:@"https://api.twitter.com/1/users/profile_image?size=bigger&screen_name=%@", twitter];
         NSURL *url = [NSURL URLWithString:twitterUrl];
+        
         
         [self.twitterImageView setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
             if (!error) {
-                // add rounded corners
-                self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:24] intValue] borderSize:1];
+                self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:36] intValue] borderSize:0];
             } else {
                 NSLog(@"Error downloading twitter image %@", error);
             }
