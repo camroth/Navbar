@@ -1,0 +1,14 @@
+# set the runtime language; this should be "node" for Node.js workers
+runtime "node"
+
+# exec is the file that will be executed when you queue a task
+exec "worker.js" # replace with your file
+
+# include dependency files when uploading
+dir "node_modules"
+
+# include dependency manifest when uploading
+file "package.json"
+
+#include settings
+file "settings.json"
