@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C24EAF01EDE412BA9014DE5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D95E68088548049721A0F0 /* libPods.a */; };
+		D728FE8416E7D95C0096C016 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE8316E7D95C0096C016 /* Default-568h@2x.png */; };
 		D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		73D95E68088548049721A0F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EF161242AE4A75A600E8A6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D728FE8316E7D95C0096C016 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		D76684BE16E47C71003A150C /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
 		D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
@@ -221,9 +223,10 @@
 		D7B1216616E4038600D33170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */,
-				D76684CD16E4A7EF003A150C /* Default@2x.png */,
 				D76684CB16E4A7E3003A150C /* Default.png */,
+				D76684CD16E4A7EF003A150C /* Default@2x.png */,
+				D728FE8316E7D95C0096C016 /* Default-568h@2x.png */,
+				D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */,
 				D76684C116E49D20003A150C /* arrow_left@2x.png */,
 				D76684C216E49D20003A150C /* arrow_right@2x.png */,
 				D7B528D416E45CFB00EE137E /* arrow_left.png */,
@@ -455,6 +458,7 @@
 				D76684CE16E4A7EF003A150C /* Default@2x.png in Resources */,
 				D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */,
 				D7AF2D5416E733520089DA48 /* Settings.bundle in Resources */,
+				D728FE8416E7D95C0096C016 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +582,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navbar/Navbar-Prefix.pch";
 				INFOPLIST_FILE = "Navbar/Navbar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-fobjc-arc",
 					"-ObjC",
@@ -599,7 +603,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navbar/Navbar-Prefix.pch";
 				INFOPLIST_FILE = "Navbar/Navbar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-fobjc-arc",
 					"-ObjC",

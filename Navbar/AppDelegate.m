@@ -41,9 +41,6 @@
     [Parse setApplicationId:@"8NPPjp3T2LEek91NIVKiqega9R0wkmuZjhPL30w8" clientKey:@"mO26FqdsGL7ZE5BJpgY7SL4uUfm5XihRK75oppuo"];
     [Parse offlineMessagesEnabled:NO];
     
-    // Add some test data
-    // [self addPostWithTitle:@"The title" forTwitterHandle:@"jakescott" withUrl:@"http://" andDate:[NSDate date]];
-    
     // Use Reachability to monitor connectivity
     [self monitorReachability];
     
@@ -65,13 +62,8 @@
 
 - (void)setupAppearance
 {
-    // Set background color of the navbar
-    // Blue
-    //[[UINavigationBar appearance] setBackgroundImage:[[UIColor colorWithRed:36/255.0 green:137/255.0 blue:197/255.0 alpha:1.0] imageFromColor] forBarMetrics:UIBarMetricsDefault];
-    
     [[UINavigationBar appearance] setBackgroundImage:[[UIColor colorWithRed:41/255.0 green:82/255.0 blue:88/255.0 alpha:1.0] imageFromColor] forBarMetrics:UIBarMetricsDefault];
     
-    // Style the navbar title... todo remove this when we add a logo..
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                 UITextAttributeTextColor: [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0],
                         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
@@ -112,23 +104,6 @@
     NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
     NSLog(@"Reachability changed: %@", curReach);
     networkStatus = [curReach currentReachabilityStatus];
-}
-
-- (void)addPostWithTitle:(NSString *)title forTwitterHandle:(NSString *)twitter withUrl:(NSString *)url andDate:(NSDate *)date
-{    
-    PFObject *post = [PFObject objectWithClassName:@"Post"];
-    [post setObject:twitter forKey:@"twitter"];
-    [post setObject:url forKey:@"url"];
-    [post setObject:title forKey:@"title"];
-    [post setObject:date forKey:@"date"];
-    
-    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error){
-            NSLog(@"Saved post: %@", post);
-        } else {
-            NSLog(@"Save failed with error %@", error);
-        }
-     }];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

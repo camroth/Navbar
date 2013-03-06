@@ -74,12 +74,9 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 
     [self setTitle:@"NAVBAR"]; // we gonna use a background image!
     
-//    UIImageView *logoImageVIew = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navbar_logo"]];
-//    self.navigationItem.titleView = logoImageVIew;
-//    self.navigationItem.titleView.frame = CGRectMake(0, 0, 320, 44);
-    
     // Remove table cell separator
-    [self.tableView setSeparatorColor:[UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0]];
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:239/255.0f green:234/255.0f blue:232/255.0f alpha:1.0]];
+    
     
     self.navigationItem.leftBarButtonItem = [self addButtonWithImageNamed:@"arrow_left" withAction:@selector(navigateYesterday) adjustX:-6.0f];
     self.navigationItem.rightBarButtonItem = [self addButtonWithImageNamed:@"arrow_right" withAction:@selector(navigateTomorrow) adjustX:6.0f];
@@ -101,9 +98,6 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     
     [button setBackgroundImage:[[UIColor colorWithRed:1 green:1 blue:1 alpha:0.3f]imageFromColor] forState:UIControlStateHighlighted]; // alpha trick
     [button setBackgroundImage:[[UIColor colorWithRed:1 green:1 blue:1 alpha:0.1f]imageFromColor] forState:UIControlStateNormal];
-    
-    //[button setBackgroundImage:[[UIColor colorWithRed:230/255.0f green:108/255.0f blue:105/255.0f alpha:1.0f]imageFromColor] forState:UIControlStateNormal];
-    
     
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, button.frame.size.width, button.frame.size.height)];

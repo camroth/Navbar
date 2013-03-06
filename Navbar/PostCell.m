@@ -96,11 +96,8 @@
     NSString *twitter = [post objectForKey:@"twitter"];
     if (twitter)
     {
-        // https://api.twitter.com/1/users/profile_image?size=normal&screen_name=jakescott
         NSString *twitterUrl = [NSString stringWithFormat:@"https://api.twitter.com/1/users/profile_image?size=bigger&screen_name=%@", twitter];
         NSURL *url = [NSURL URLWithString:twitterUrl];
-        
-        
         [self.twitterImageView setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
             if (!error) {
                 self.twitterImageView.image = [self.twitterImageView.image roundedCornerImage:[[NSNumber numberWithInt:36] intValue] borderSize:0];

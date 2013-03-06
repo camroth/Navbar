@@ -34,7 +34,7 @@
     self.dateLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:16];
     self.dateLabel.textColor = [UIColor darkGrayColor];
 
-    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:244/255.0f green:244/255.0f blue:244/255.0f alpha:1.0] imageFromColor]];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:239/255.0f green:234/255.0f blue:232/255.0f alpha:1.0] imageFromColor]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
