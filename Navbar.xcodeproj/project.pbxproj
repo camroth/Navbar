@@ -22,6 +22,7 @@
 		D728FEA616E802740096C016 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9A16E802740096C016 /* iTunesArtwork.png */; };
 		D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEA816E84BB20096C016 /* OpenInChromeController.m */; };
 		D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */; };
+		D728FEAE16E858910096C016 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D728FEAD16E858910096C016 /* Twitter.framework */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
 		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
@@ -96,6 +97,7 @@
 		D728FEA816E84BB20096C016 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenInChromeController.m; path = Navbar/OpenInChromeController.m; sourceTree = "<group>"; };
 		D728FEAA16E84BBF0096C016 /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ImageFromColor.h"; path = "Navbar/UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
 		D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ImageFromColor.m"; path = "Navbar/UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
+		D728FEAD16E858910096C016 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D728FEAE16E858910096C016 /* Twitter.framework in Frameworks */,
 				D7B1217F16E429FC00D33170 /* ImageIO.framework in Frameworks */,
 				D7C2485416E1A8B5003962D5 /* Accounts.framework in Frameworks */,
 				D7C2485516E1A8B5003962D5 /* AdSupport.framework in Frameworks */,
@@ -357,6 +360,7 @@
 		D7C2482116E1A6AF003962D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D728FEAD16E858910096C016 /* Twitter.framework */,
 				D7B1217E16E429FC00D33170 /* ImageIO.framework */,
 				D7C2486316E1AAAB003962D5 /* Parse.framework */,
 				D7C2484716E1A8B4003962D5 /* Accounts.framework */,

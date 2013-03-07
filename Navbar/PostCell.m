@@ -7,9 +7,7 @@
 //
 
 #import "PostCell.h"
-#import "UIImageView+WebCache.h"
-#import "UIImage+RoundedCornerAdditions.h"
-#import "UIColor+ImageFromColor.h"
+
 
 @implementation PostCell
 

@@ -7,7 +7,7 @@
 //
 
 #import "PostNoDataCell.h"
-#import "UIColor+ImageFromColor.h"
+
 
 @implementation PostNoDataCell
 

@@ -7,7 +7,7 @@
 //
 
 #import "PostHeaderCell.h"
-#import "UIColor+ImageFromColor.h"
+
 
 @implementation PostHeaderCell
 

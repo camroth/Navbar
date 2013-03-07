@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
+#import "UIImageView+WebCache.h"
+#import "UIImage+RoundedCornerAdditions.h"
+#import "UIColor+ImageFromColor.h"
 
 @interface PostCell : PFTableViewCell
 

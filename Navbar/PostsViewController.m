@@ -7,14 +7,6 @@
 //
 
 #import "PostsViewController.h"
-#import "NSDate+Calculations.h"
-#import "Reachability.h"
-#import "Parse/Parse.h"
-#import "PostCell.h"
-#import "PostNoDataCell.h"
-#import "PostHeaderCell.h"
-#import "UIColor+ImageFromColor.h"
-#import "OpenInChromeController.h"
 
 static NSString *PostCellIdentifier = @"PostCell";
 static NSString *PostNoDataCellIdentifier = @"PostNoDataCell";
@@ -252,10 +244,12 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PFObject *post = [self.objects objectAtIndex:indexPath.row];
 
-    NSString *url = [post objectForKey:@"url"];
-    if (url) {
-        [self openURL:url];
-    }
+//    NSString *url = [post objectForKey:@"url"];
+//    if (url) {
+//        [self openURL:url];
+//    }
+    
+    [self sendEasyTweet];
 }
 
 - (void)openURL:(NSString *)url
@@ -288,6 +282,40 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 //    }
     return result;
 }
+
+- (IBAction)sendEasyTweet {
+
+    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
+    [tweetViewController setInitialText:@"Hello. This is a tweet."];
+    [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
+        NSString *output;
+        switch (result) {
+            case TWTweetComposeViewControllerResultCancelled:
+                // The cancel button was tapped.
+                output = @"Tweet cancelled.";
+                NSLog(@"Tweet cancelled");
+                break;
+
+            case TWTweetComposeViewControllerResultDone:
+                // The tweet was sent.
+                output = @"Tweet done.";
+                NSLog(@"Tweet done");
+                break;
+                
+            default:
+                break;
+        }
+        
+        [self performSelectorOnMainThread:@selector(displayText:) withObject:output waitUntilDone:NO];
+        
+        // Dismiss the tweet composition view controller.
+        [self dismissModalViewControllerAnimated:YES];
+    }];
+    
+    // Present the tweet composition view controller modally.
+    [self presentModalViewController:tweetViewController animated:YES];
+}
+
 
 @end
 
