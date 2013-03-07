@@ -28,7 +28,7 @@ I am importing data from Sidebar into Parse using a [node.js script][0]. The scr
 
 In the case of an API change I can just update my node.js script and upload it to [IronWorker][5] and be back up in running without users ever seeing an error. More importantly it means I don't have to patch the app and wait for Apple to approve the release to the App Store!
 
-Parse makes it easy to cache data locally on the phone. You can see an [example of this in the app here][3]. The app uses the cache while waiting for results to refresh from the network. This allows the screens load instantly when you page between days. The app also detect's when it is online/offline, and will not issue network requests while offline. To detect changes to internet availability I am using [Reachability][4].
+Parse makes it easy to cache data locally on the phone. You can see an [example of this in the app here][3]. The app uses the cache while waiting for results to refresh from the network. This allows the screens to load instantly when you page between days. The app also detect's when it is online/offline, and will not issue network requests while offline. To detect changes to internet availability I am using [Reachability][4].
 
 I wish more app's would open links in Chrome if it is installed. The easiest way to have your iOS app open links in Chrome is to use the [OpenInChromeController][7] class by GoogleChrome.
 
