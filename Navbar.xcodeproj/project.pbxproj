@@ -20,11 +20,11 @@
 		D728FEA416E802740096C016 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9816E802740096C016 /* Icon.png */; };
 		D728FEA516E802740096C016 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9916E802740096C016 /* Icon@2x.png */; };
 		D728FEA616E802740096C016 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9A16E802740096C016 /* iTunesArtwork.png */; };
-		D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */; };
+		D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEA816E84BB20096C016 /* OpenInChromeController.m */; };
+		D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
 		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
-		D7AF2D5216E728130089DA48 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AF2D5116E728130089DA48 /* OpenInChromeController.m */; };
 		D7AF2D5416E733520089DA48 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7AF2D5316E733520089DA48 /* Settings.bundle */; };
 		D7B1216716E4038600D33170 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215816E4038600D33170 /* LICENSE.txt */; };
 		D7B1216816E4038600D33170 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */; };
@@ -92,13 +92,13 @@
 		D728FE9816E802740096C016 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D728FE9916E802740096C016 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D728FE9A16E802740096C016 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
-		D76684BE16E47C71003A150C /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
-		D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
+		D728FEA716E84BB20096C016 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenInChromeController.h; path = Navbar/OpenInChromeController.h; sourceTree = "<group>"; };
+		D728FEA816E84BB20096C016 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenInChromeController.m; path = Navbar/OpenInChromeController.m; sourceTree = "<group>"; };
+		D728FEAA16E84BBF0096C016 /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ImageFromColor.h"; path = "Navbar/UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
+		D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ImageFromColor.m"; path = "Navbar/UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
-		D7AF2D5016E727E70089DA48 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInChromeController.h; sourceTree = "<group>"; };
-		D7AF2D5116E728130089DA48 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInChromeController.m; sourceTree = "<group>"; };
 		D7AF2D5316E733520089DA48 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D7B1215816E4038600D33170 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		D7B1215916E4038600D33170 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		D7AF2D4F16E727C10089DA48 /* OpenInChromeController */ = {
 			isa = PBXGroup;
 			children = (
-				D7AF2D5016E727E70089DA48 /* OpenInChromeController.h */,
-				D7AF2D5116E728130089DA48 /* OpenInChromeController.m */,
+				D728FEA716E84BB20096C016 /* OpenInChromeController.h */,
+				D728FEA816E84BB20096C016 /* OpenInChromeController.m */,
 			);
 			name = OpenInChromeController;
 			sourceTree = "<group>";
@@ -275,8 +275,8 @@
 				D7B1218316E4330A00D33170 /* UIImage+ResizeAdditions.m */,
 				D7B1218416E4330A00D33170 /* UIImage+RoundedCornerAdditions.h */,
 				D7B1218516E4330A00D33170 /* UIImage+RoundedCornerAdditions.m */,
-				D76684BE16E47C71003A150C /* UIColor+ImageFromColor.h */,
-				D76684BF16E47C71003A150C /* UIColor+ImageFromColor.m */,
+				D728FEAA16E84BBF0096C016 /* UIColor+ImageFromColor.h */,
+				D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */,
 			);
 			name = "UIImage Categories";
 			sourceTree = "<group>";
@@ -520,8 +520,8 @@
 				D7B1218816E4330A00D33170 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				D7B1219616E43C6200D33170 /* PostNoDataCell.m in Sources */,
 				D7B121A016E43FA700D33170 /* PostHeaderCell.m in Sources */,
-				D76684C016E47C71003A150C /* UIColor+ImageFromColor.m in Sources */,
-				D7AF2D5216E728130089DA48 /* OpenInChromeController.m in Sources */,
+				D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */,
+				D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
