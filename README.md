@@ -11,12 +11,13 @@ Q: Why did you call it Navbar?
 
 A: I asked [Sacha Greif](http://), the creator of Sidebar, if it would be okay to create an app and he kindly said yes as long as I don't use the name Sidebar, and suggested I use Footer :) So I used Navbar instead.
 
-Logo
-============
+Screenshots
+=============
 
-I am not a designer, if you would like to contribute a logo be my guest!
+![Launch Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-1.png)
+![Main Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-2.png)
+![Main Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-4.png)
 
-![Launch Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-3.png)
 
 
 Tech stuff
@@ -38,13 +39,14 @@ I wish more app's would open links in Chrome if it is installed. The easiest way
 		                   createNewTab:createNewTab];
 	}
 
+Logo
+============
+
+I am not a designer, if you would like to contribute a logo be my guest!
+
+![Launch Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-3.png)
 
 
-Screenshots
-=============
-
-![Launch Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-1.png)
-![Main Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-2.png)
 
 I wrote this README using [Mou][2].
 
