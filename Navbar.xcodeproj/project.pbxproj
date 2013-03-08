@@ -19,7 +19,6 @@
 		D728FEA316E802740096C016 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9716E802740096C016 /* Icon-Small@2x.png */; };
 		D728FEA416E802740096C016 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9816E802740096C016 /* Icon.png */; };
 		D728FEA516E802740096C016 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9916E802740096C016 /* Icon@2x.png */; };
-		D728FEA616E802740096C016 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D728FE9A16E802740096C016 /* iTunesArtwork.png */; };
 		D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEA816E84BB20096C016 /* OpenInChromeController.m */; };
 		D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */; };
 		D728FEAE16E858910096C016 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D728FEAD16E858910096C016 /* Twitter.framework */; };
@@ -80,6 +79,7 @@
 		D7C2486416E1AAAB003962D5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C2486316E1AAAB003962D5 /* Parse.framework */; };
 		D7C2486A16E2BAFD003962D5 /* NSDate+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C2486916E2BAFD003962D5 /* NSDate+Calculations.m */; };
 		D7C2489F16E2C78E003962D5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7C2489E16E2C78E003962D5 /* MainWindow.xib */; };
+		D7CDF30616EA99B9008C17B2 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = D7CDF30516EA99B9008C17B2 /* iTunesArtwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +96,6 @@
 		D728FE9716E802740096C016 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		D728FE9816E802740096C016 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D728FE9916E802740096C016 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		D728FE9A16E802740096C016 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		D728FEA716E84BB20096C016 /* OpenInChromeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenInChromeController.h; path = Navbar/OpenInChromeController.h; sourceTree = "<group>"; };
 		D728FEA816E84BB20096C016 /* OpenInChromeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenInChromeController.m; path = Navbar/OpenInChromeController.m; sourceTree = "<group>"; };
 		D728FEAA16E84BBF0096C016 /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ImageFromColor.h"; path = "Navbar/UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
@@ -174,6 +173,7 @@
 		D7C2486816E2BAFD003962D5 /* NSDate+Calculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Calculations.h"; path = "Navbar/NSDate+Calculations.h"; sourceTree = "<group>"; };
 		D7C2486916E2BAFD003962D5 /* NSDate+Calculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Calculations.m"; path = "Navbar/NSDate+Calculations.m"; sourceTree = "<group>"; };
 		D7C2489E16E2C78E003962D5 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D7CDF30516EA99B9008C17B2 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +249,7 @@
 		D7B1216616E4038600D33170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7CDF30516EA99B9008C17B2 /* iTunesArtwork */,
 				D728FE8F16E802740096C016 /* Default-568h@2x.png */,
 				D728FE9016E802740096C016 /* Default.png */,
 				D728FE9116E802740096C016 /* Default@2x.png */,
@@ -260,7 +261,6 @@
 				D728FE9716E802740096C016 /* Icon-Small@2x.png */,
 				D728FE9816E802740096C016 /* Icon.png */,
 				D728FE9916E802740096C016 /* Icon@2x.png */,
-				D728FE9A16E802740096C016 /* iTunesArtwork.png */,
 				D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */,
 				D76684C116E49D20003A150C /* arrow_left@2x.png */,
 				D76684C216E49D20003A150C /* arrow_right@2x.png */,
@@ -504,8 +504,8 @@
 				D728FEA316E802740096C016 /* Icon-Small@2x.png in Resources */,
 				D728FEA416E802740096C016 /* Icon.png in Resources */,
 				D728FEA516E802740096C016 /* Icon@2x.png in Resources */,
-				D728FEA616E802740096C016 /* iTunesArtwork.png in Resources */,
 				D728FEB316E9459C0096C016 /* SharingViewController.xib in Resources */,
+				D7CDF30616EA99B9008C17B2 /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73EF161242AE4A75A600E8A6 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -638,6 +639,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -646,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73EF161242AE4A75A600E8A6 /* Pods.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jake Scott (AK64UBJJ39)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -659,6 +662,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BCA43EE-4466-4EC2-B4E1-AA16091AF9A5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
