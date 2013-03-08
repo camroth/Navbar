@@ -35,7 +35,8 @@
 {
     [super awakeFromNib];
 
-    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0]imageFromColor]];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0]imageFromColor]];   
+    self.selectedBackgroundView = [[UIImageView alloc] initWithImage:[[UIColor colorWithRed:139/255.0f green:93/255.0f blue:121/255.0f alpha:1]imageFromColor]];
     
     self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Regular" size:14];
     self.titleLabel.textColor = [UIColor darkGrayColor];
@@ -57,11 +58,18 @@
 -(void)configureForPost:(PFObject *)post
 {
     NSString *urlString = [post objectForKey:@"url"];
-    if (urlString)
+    if (urlString && urlString.length > 0)
     {
         NSURL *url = [[NSURL alloc]initWithString:[post objectForKey:@"url"]];
         NSString *host = [url host];
-        self.urlLabel.text = host;
+        
+        NSString *twitter = [post objectForKey:@"twitter"];
+        if (twitter && twitter.length > 0) {
+            twitter = [NSString stringWithFormat:@"\nvia @%@", twitter];
+        }
+        
+        self.urlLabel.text = [NSString stringWithFormat:@"%@ %@", host, twitter];
+        
     } else {
         self.urlLabel.text = @"No url, yikes!";
     }
@@ -70,7 +78,6 @@
     self.titleLabel.text = titleString ? titleString : @"No title umm woops!";
 
     CGFloat width = 240.0f;
-    CGFloat urlHeight = 22.0f;
     
     // Resize the title rect based on content
     CGRect rect = CGRectMake(10, 0, width, 88);
@@ -79,15 +86,22 @@
     rect.size.height = self.titleLabel.frame.size.height;
     self.titleLabel.frame = rect;
     
+    // Resize the url rect based on content
+    CGRect urlRect = CGRectMake(10, 0, width, 88);
+    self.urlLabel.frame = urlRect;
+    [self.urlLabel sizeToFit];
+    urlRect.size.height = self.urlLabel.frame.size.height;
+    self.urlLabel.frame = urlRect;
+    
     // Vertically position the labels
-    CGFloat height = self.titleLabel.frame.size.height + urlHeight;
+    CGFloat height = self.titleLabel.frame.size.height + self.urlLabel.frame.size.height;
     CGFloat y = ceilf(self.frame.size.height / 2.0f) - ceilf(height / 2.0f);
     
     rect = CGRectMake(self.titleLabel.frame.origin.x, y, self.titleLabel.frame.size.width, self.titleLabel.frame.size.height);
     self.titleLabel.frame = rect;
     
     // Position the url based on the title label
-    rect = CGRectMake(self.titleLabel.frame.origin.x, self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height, width, urlHeight);
+    rect = CGRectMake(self.urlLabel.frame.origin.x, y + self.titleLabel.frame.size.height, self.urlLabel.frame.size.width, self.urlLabel.frame.size.height);
     self.urlLabel.frame = rect;
     
     

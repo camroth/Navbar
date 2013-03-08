@@ -64,7 +64,7 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
     cellNib = [UINib nibWithNibName:PostHeaderCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:PostHeaderCellIdentifier];
 
-    [self setTitle:@"NAVBAR"]; // we gonna use a background image!
+    [self setTitle:@"NAVBAR"];
     
     // Remove table cell separator
     [self.tableView setSeparatorColor:[UIColor colorWithRed:239/255.0f green:234/255.0f blue:232/255.0f alpha:1.0]];
@@ -243,79 +243,12 @@ static NSString *PostHeaderCellIdentifier = @"PostHeaderCell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PFObject *post = [self.objects objectAtIndex:indexPath.row];
-
-//    NSString *url = [post objectForKey:@"url"];
-//    if (url) {
-//        [self openURL:url];
-//    }
     
-    [self sendEasyTweet];
-}
-
-- (void)openURL:(NSString *)url
-{
-    NSURL *nsUrl = [NSURL URLWithString:url];
-    if ([chromeController isChromeInstalled] && [self openInChromeUserSetting]) {
-        [chromeController openInChrome:nsUrl withCallbackURL:nil createNewTab:YES];
-        return;
-    } else {
-        [[UIApplication sharedApplication] openURL:nsUrl];
-    }
-}
-
-- (BOOL)openInChromeUserSetting
-{
-    NSString *useChromeSetting = [[NSUserDefaults standardUserDefaults] stringForKey:@"OpenLinksInChrome"];
-
-//    NSLog(@"Use chrome setting %@", useChromeSetting);
+    SharingViewController *controller = [[SharingViewController alloc] initWithNibName:@"SharingViewController" bundle:nil];
+    controller.post = post;
     
-    if (!useChromeSetting) {
-//        NSLog(@"Eek");
-        return NO;
-    }
-    
-    BOOL result = [useChromeSetting isEqualToString:@"1"]  ? YES : NO;
-//    if (result) {
-//        NSLog(@"use chrome");
-//    } else {
-//        NSLog(@"Don't use chrome");
-//    }
-    return result;
+   [controller presentInRootViewController];
 }
-
-- (IBAction)sendEasyTweet {
-
-    TWTweetComposeViewController *tweetViewController = [[TWTweetComposeViewController alloc] init];
-    [tweetViewController setInitialText:@"Hello. This is a tweet."];
-    [tweetViewController setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
-        NSString *output;
-        switch (result) {
-            case TWTweetComposeViewControllerResultCancelled:
-                // The cancel button was tapped.
-                output = @"Tweet cancelled.";
-                NSLog(@"Tweet cancelled");
-                break;
-
-            case TWTweetComposeViewControllerResultDone:
-                // The tweet was sent.
-                output = @"Tweet done.";
-                NSLog(@"Tweet done");
-                break;
-                
-            default:
-                break;
-        }
-        
-        [self performSelectorOnMainThread:@selector(displayText:) withObject:output waitUntilDone:NO];
-        
-        // Dismiss the tweet composition view controller.
-        [self dismissModalViewControllerAnimated:YES];
-    }];
-    
-    // Present the tweet composition view controller modally.
-    [self presentModalViewController:tweetViewController animated:YES];
-}
-
 
 @end
 

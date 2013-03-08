@@ -82,7 +82,7 @@
 							<object class="IBUILabel" id="350032236">
 								<reference key="NSNextResponder" ref="702429790"/>
 								<int key="NSvFlags">290</int>
-								<string key="NSFrame">{{12, 45}, {240, 22}}</string>
+								<string key="NSFrame">{{12, 45}, {227, 37}}</string>
 								<reference key="NSSuperview" ref="702429790"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="960751543"/>
@@ -99,6 +99,8 @@
 								</object>
 								<reference key="IBUIHighlightedColor" ref="304675753"/>
 								<int key="IBUIBaselineAdjustment">0</int>
+								<int key="IBUINumberOfLines">0</int>
+								<int key="IBUILineBreakMode">0</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<string key="name">Helvetica</string>
 									<string key="family">Helvetica</string>
@@ -111,6 +113,7 @@
 									<int key="NSfFlags">16</int>
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
+								<double key="preferredMaxLayoutWidth">227</double>
 							</object>
 							<object class="IBUIImageView" id="960751543">
 								<reference key="NSNextResponder" ref="702429790"/>
@@ -118,7 +121,6 @@
 								<string key="NSFrame">{{253, 16}, {56, 56}}</string>
 								<reference key="NSSuperview" ref="702429790"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

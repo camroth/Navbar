@@ -16,6 +16,7 @@
 #import "PostHeaderCell.h"
 #import "UIColor+ImageFromColor.h"
 #import "OpenInChromeController.h"
+#import "SharingViewController.h"
 
 @interface PostsViewController : PFQueryTableViewController
 

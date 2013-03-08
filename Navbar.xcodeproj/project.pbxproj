@@ -23,6 +23,9 @@
 		D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEA816E84BB20096C016 /* OpenInChromeController.m */; };
 		D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */; };
 		D728FEAE16E858910096C016 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D728FEAD16E858910096C016 /* Twitter.framework */; };
+		D728FEB216E9459C0096C016 /* SharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEB016E9459C0096C016 /* SharingViewController.m */; };
+		D728FEB316E9459C0096C016 /* SharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728FEB116E9459C0096C016 /* SharingViewController.xib */; };
+		D728FEB616E9557D0096C016 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEB516E9557D0096C016 /* GradientView.m */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
 		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
@@ -98,6 +101,11 @@
 		D728FEAA16E84BBF0096C016 /* UIColor+ImageFromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ImageFromColor.h"; path = "Navbar/UIColor+ImageFromColor.h"; sourceTree = "<group>"; };
 		D728FEAB16E84BBF0096C016 /* UIColor+ImageFromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ImageFromColor.m"; path = "Navbar/UIColor+ImageFromColor.m"; sourceTree = "<group>"; };
 		D728FEAD16E858910096C016 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		D728FEAF16E9459C0096C016 /* SharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingViewController.h; sourceTree = "<group>"; };
+		D728FEB016E9459C0096C016 /* SharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingViewController.m; sourceTree = "<group>"; };
+		D728FEB116E9459C0096C016 /* SharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharingViewController.xib; sourceTree = "<group>"; };
+		D728FEB416E955610096C016 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		D728FEB516E9557D0096C016 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
@@ -309,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				D7B1218F16E4350E00D33170 /* UITableViewCells */,
+				D728FEB416E955610096C016 /* GradientView.h */,
+				D728FEB516E9557D0096C016 /* GradientView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -318,6 +328,9 @@
 			children = (
 				D7C2483D16E1A6AF003962D5 /* PostsViewController.h */,
 				D7C2483E16E1A6AF003962D5 /* PostsViewController.m */,
+				D728FEAF16E9459C0096C016 /* SharingViewController.h */,
+				D728FEB016E9459C0096C016 /* SharingViewController.m */,
+				D728FEB116E9459C0096C016 /* SharingViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -487,6 +500,7 @@
 				D728FEA416E802740096C016 /* Icon.png in Resources */,
 				D728FEA516E802740096C016 /* Icon@2x.png in Resources */,
 				D728FEA616E802740096C016 /* iTunesArtwork.png in Resources */,
+				D728FEB316E9459C0096C016 /* SharingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +540,8 @@
 				D7B121A016E43FA700D33170 /* PostHeaderCell.m in Sources */,
 				D728FEA916E84BB20096C016 /* OpenInChromeController.m in Sources */,
 				D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */,
+				D728FEB216E9459C0096C016 /* SharingViewController.m in Sources */,
+				D728FEB616E9557D0096C016 /* GradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
