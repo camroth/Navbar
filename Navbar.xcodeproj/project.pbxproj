@@ -26,6 +26,7 @@
 		D728FEB216E9459C0096C016 /* SharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEB016E9459C0096C016 /* SharingViewController.m */; };
 		D728FEB316E9459C0096C016 /* SharingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728FEB116E9459C0096C016 /* SharingViewController.xib */; };
 		D728FEB616E9557D0096C016 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D728FEB516E9557D0096C016 /* GradientView.m */; };
+		D765DC4516EA78AF004ADF2D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = D765DC4416EA78AF004ADF2D /* Settings.m */; };
 		D76684C316E49D20003A150C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C116E49D20003A150C /* arrow_left@2x.png */; };
 		D76684C416E49D20003A150C /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684C216E49D20003A150C /* arrow_right@2x.png */; };
 		D76684D016E4ACCF003A150C /* navbar_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */; };
@@ -106,6 +107,8 @@
 		D728FEB116E9459C0096C016 /* SharingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharingViewController.xib; sourceTree = "<group>"; };
 		D728FEB416E955610096C016 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		D728FEB516E9557D0096C016 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		D765DC4316EA78AF004ADF2D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		D765DC4416EA78AF004ADF2D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		D76684C116E49D20003A150C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		D76684C216E49D20003A150C /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		D76684CF16E4ACCF003A150C /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 				D7B1218E16E434E600D33170 /* Controllers */,
 				D7C2483116E1A6AF003962D5 /* AppDelegate.h */,
 				D7C2483216E1A6AF003962D5 /* AppDelegate.m */,
+				D765DC4316EA78AF004ADF2D /* Settings.h */,
+				D765DC4416EA78AF004ADF2D /* Settings.m */,
 				D7C2489E16E2C78E003962D5 /* MainWindow.xib */,
 				D7B1218C16E434A800D33170 /* Supporting Files */,
 				D7B1215616E4038600D33170 /* Resources */,
@@ -542,6 +547,7 @@
 				D728FEAC16E84BBF0096C016 /* UIColor+ImageFromColor.m in Sources */,
 				D728FEB216E9459C0096C016 /* SharingViewController.m in Sources */,
 				D728FEB616E9557D0096C016 /* GradientView.m in Sources */,
+				D765DC4516EA78AF004ADF2D /* Settings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

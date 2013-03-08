@@ -13,6 +13,7 @@
 #import "Reachability.h"
 #import "UIColor+ImageFromColor.h"
 #import "OpenInChromeController.h"
+#import "Settings.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

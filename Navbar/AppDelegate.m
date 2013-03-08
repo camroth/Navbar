@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Settings.h"
 
 @interface AppDelegate() {
     
@@ -32,7 +33,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"8NPPjp3T2LEek91NIVKiqega9R0wkmuZjhPL30w8" clientKey:@"mO26FqdsGL7ZE5BJpgY7SL4uUfm5XihRK75oppuo"];
+    Settings *settings = [[Settings alloc]init];
+   
+    [Parse setApplicationId:[settings parseAppId]  clientKey: [settings parseClientKey]];
     [Parse offlineMessagesEnabled:NO];
     
     // Use Reachability to monitor connectivity
