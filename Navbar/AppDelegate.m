@@ -61,7 +61,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                 UITextAttributeTextColor: [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1.0],
                         UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
-                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Regular" size:15.0]
+                                    UITextAttributeFont : [UIFont fontWithName:@"Montserrat-Bold" size:17.0]
      }];
     
     [self.navController.navigationBar setTitleVerticalPositionAdjustment:3.0f forBarMetrics:UIBarMetricsDefault];
