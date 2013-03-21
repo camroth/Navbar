@@ -1,7 +1,7 @@
 Navbar
 ============
 
-An unoffical app for [Sidebar.io](http://sidebar.io).
+An unoffical app for [Sidebar.io](http://sidebar.io). Get it on the [iTunes App Store][9] now.
 
 Q: That's nice, but what is Sidebar.io? 
 
@@ -59,6 +59,6 @@ I wrote this README using [Mou][2].
 [6]:http://www.parse.com
 [7]:https://github.com/GoogleChrome/OpenInChrome/blob/master/OpenInChromeController.h
 [8]:http://sachagreif.com/
-
+[9]:https://itunes.apple.com/us/app/navbar/id617066164?mt=8&ign-mpt=uo%3D4
 
 
