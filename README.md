@@ -19,6 +19,11 @@ Screenshots
 ![Main Screen](https://raw.github.com/superlogical/Navbar/master/PSD/screen-4.png)
 
 
+Parse
+=============
+![Parse App Gallery](https://raw.github.com/superlogical/Navbar/master/PSD/parse-2.png)
+
+
 
 Tech stuff
 =============
